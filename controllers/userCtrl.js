@@ -52,4 +52,6 @@ const loginController = async (req, res) => {
   }
 };
 
+const applyDoctorController =() => {}
+
 module.exports = { loginController, registerController };
