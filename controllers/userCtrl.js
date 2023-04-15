@@ -60,6 +60,7 @@ try{
       success:false,
     });
 
+<<<<<<< HEAD
   }else{
     res.status(200).send({
       success:true,
@@ -81,3 +82,8 @@ try{
   });
 }
 module.exports = { loginController, registerController , authController };
+=======
+const applyDoctorController =() => {}
+
+module.exports = { loginController, registerController };
+>>>>>>> 8b59eca31e296c0b04a2f4be004a281f0bde9e1a
