@@ -130,10 +130,10 @@ const ApplyDoctor = () => {
 
                     </Form.Item>
                 </Col>
-                
-
-
             </Row>
+            <div className="d-flex justify-content-end">
+                <button className="btn btn-primary" type="submit">submit</button>
+            </div>
    
     </Layout>
   );
