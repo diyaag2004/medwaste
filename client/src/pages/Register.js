@@ -26,6 +26,10 @@ function Register() {
           <Form.Item label="city" name="city">
             <Input type="city"required/>
           </Form.Item>
+          <Form.Item label="checkbox" name="disabled" valuepropname="checked">
+            <Checkbox>checkbox</Checkbox>
+          </Form.Item>
+          
           
           <Link to="/login" className="m-2">
             Already user login here
