@@ -1,11 +1,11 @@
 {
   "name": "medwaste",
   "version": "1.0.0",
-  "description": "Medical Waste treatment \r edited by ashish\r edited by diya\r edited by priya",
+  "description": "Medical Waste treatment",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "server": "nodemon server.js"
   },
   "keywords": [],
