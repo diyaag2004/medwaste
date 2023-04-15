@@ -1,6 +1,6 @@
 # medwaste
 
-hff hbfvhbfdv jhfbvmd fvjv  
+medical waste treatment
 edited by ashish
 edited by diya
 edited by priya
