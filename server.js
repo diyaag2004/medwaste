@@ -19,6 +19,12 @@ app.use(moragan("dev"));
 
 app.use("/api/v1/user", require("./routes/userRoutes"));
 
+app.get("/",(req,res) => {
+  res.status(200).send({
+    message:"server running",
+  })
+})
+
 
 const port = process.env.PORT || 8080;
 
