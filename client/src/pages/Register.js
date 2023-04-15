@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 import "../styles/RegiserStyles.css";
-import { Form, Input, message, Checkbox , email } from "antd";
+import { Form, Input, message } from "antd";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-
 const Register = () => {
   const navigate = useNavigate();
+
+  //form handler
   const onfinishHandler = async (values) => {
     try {
       const res = await axios.post("/api/v1/user/register", values);
@@ -21,8 +22,8 @@ const Register = () => {
     }
   };
   return (
-    <div>
-        <div className="form-container ">
+    <>
+      <div className="form-container ">
         <Form
           layout="vertical"
           onFinish={onfinishHandler}
@@ -44,37 +45,10 @@ const Register = () => {
           <button className="btn btn-primary" type="submit">
             Register
           </button>
-          {/* <h3 className="text-center">Register From</h3>
-          <Form.Item label="hospital name" name=" name">
-            <Input type="text" required />
-          </Form.Item>
-          <Form.Item label="Email" name="email">
-            <Input type="email" required />
-          </Form.Item>
-          <Form.Item label="Password" name="password">
-            <Input type="password" required />
-          </Form.Item>
-          <Form.Item label="confirm password" name="password">
-            <Input type="password"required/>
-          </Form.Item>
-          <Form.Item label="city" name="city">
-            <Input type="city"required/>
-          </Form.Item>
-          <Form.Item label="checkbox" name="disabled" valuepropname="checked">
-            <Checkbox>checkbox</Checkbox>
-          </Form.Item>
-          
-          
-          <Link to="/login" className="m-2">
-            Already user login here
-          </Link>
-          <button className="btn btn-primary" type="submit">
-            Register
-          </button> */}
         </Form>
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default Register
+export default Register;
