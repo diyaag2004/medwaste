@@ -1,14 +1,15 @@
 {
   "name": "medwaste",
   "version": "1.0.0",
-  "description": "hff hbfvhbfdv jhfbvmd fvjv  \r edited by ashish\r edited by diya",
+  "description": "Medical Waste treatment \r edited by ashish\r edited by diya\r edited by priya",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ashish Kumar , Diya Agrawal , Priya Kumari",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
