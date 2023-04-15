@@ -42,48 +42,14 @@ const loginController = async (req, res) => {
         .status(200)
         .send({ message: "Invlid EMail or Password", success: false });
     }
-    const token = jwt.sign({ id: user.__id }, process.env.JWT_SECRET, {
-      expiresIn: "1d",
+    const token = await jwt.sign({ _id: user._id }, process.env.JWT_SECRET ,{
+      expiresIn: "2d",
     });
-    res.status(200).send({ message: "Login Success", success: true, token });
+    res.status(200).send({success: true, message: "Login Success", token });
   } catch (error) {
     console.log(error);
     res.status(500).send({ message: `Error in Login CTRL ${error.message}` });
-  }
+  };
 };
-const authController = async(req,res) =>{
-try{
-  const user = await userModel.findOne({_id: req.body.userId});
-  if(!user){
-    return res.status(200).send({
-      message:"user not found",
-      success:false,
-    });
-
-<<<<<<< HEAD
-  }else{
-    res.status(200).send({
-      success:true,
-      data:{
-        name:user.name,
-        email:user.email,
-      },
-
-    });
-  }
-}
-}
-  catch(error){
-  console.log(error);
-  res.status(500).send({
-    message:"auth error",
-    success:false,
-    error,
-  });
-}
-module.exports = { loginController, registerController , authController };
-=======
-const applyDoctorController =() => {}
 
 module.exports = { loginController, registerController };
->>>>>>> 8b59eca31e296c0b04a2f4be004a281f0bde9e1a
