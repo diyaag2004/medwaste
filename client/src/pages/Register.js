@@ -1,5 +1,6 @@
 import React from 'react';
-import { Form, Input, message } from "antd";
+import { Form, Input, message, checkbox, email } from "antd";
+
 
 function Register() {
   return (
@@ -7,7 +8,7 @@ function Register() {
         <div className="form-container ">
         <Form
           layout="vertical"
-          //onFinish={onfinishHandler}
+          onFinish={onfinishHandler}
           className="register-form"
         >
           <h3 className="text-center">Register From</h3>
@@ -26,10 +27,14 @@ function Register() {
           <Form.Item label="city" name="city">
             <Input type="city"required/>
           </Form.Item>
+          <Form.Item label="checkbox" name="disabled" valuepropname="checked">
+            <Checkbox>checkbox</Checkbox>
+          </Form.Item>
           
-          {/* <Link to="/ogin" className="m-2">
+          
+          <Link to="/login" className="m-2">
             Already user login here
-          </Link> */}
+          </Link>
           <button className="btn btn-primary" type="submit">
             Register
           </button>
