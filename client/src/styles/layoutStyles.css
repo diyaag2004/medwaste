@@ -1,0 +1,36 @@
+.main{
+    padding: 10px;
+    margin: 100vh;
+}
+.layout{
+    display: flex;
+}
+.sidebar{
+    min-height: 100%;
+    width: 300px;
+    border-radius: 5px;
+    background-color: black;
+    box-shadow: 0 0 2px gray;
+    margin-right: 20px;
+}
+.content{
+    width: 100px;
+    height: 100px;
+}
+.header{
+    height: 10vh;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+}
+.body{
+    height:85vh;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+}
+.logo H6{
+    font-size: 1rem;
+    text-align: center;
+    margin: 20px 0px;
+}
