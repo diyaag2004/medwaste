@@ -1,4 +1,15 @@
 {
+  "name": "medwaste",
+  "version": "1.0.0",
+  "description": "hff hbfvhbfdv jhfbvmd fvjv  \r edited by ashish\r edited by diya",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
