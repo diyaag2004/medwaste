@@ -2,6 +2,7 @@ const express = require("express");
 const {
     loginController,
     registerController,
+    applyDoctorController,
 } =require("../controllers/userCtrl");
 //router onject 
 const router = express.Router();
@@ -12,6 +13,6 @@ router.post("/login",loginController);
 router.post("/register", registerController);
 //Auth || POST
 router.post('/getUserData', authMiddleware ,  authController)
-module.exports = router;
+module.exports =router;
 
 

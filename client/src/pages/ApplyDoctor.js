@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from './../components/Layout';
-import {} from 'antd'
+import { Col, Form, Input, Row, TimePicker} from 'antd'
 
 const ApplyDoctor = () => {
     const HandleFinish = (values) => {
@@ -83,8 +83,60 @@ const ApplyDoctor = () => {
             </Row>
 
         </Form>
-     </Layout>
-  )
-}
+
+         <h4 className="">Professional Details:</h4>
+            <Row gutter={20}>
+               
+                <Col xs={24} md={24} lg={8}>
+                    <Form.Item
+                     label=" Specialization"
+                     name="specialization"
+                     required
+                     rules= {[{ required: true }]}
+                     >
+                        <Input type="text" placeholder="your specialization" />
+                    </Form.Item>
+                </Col>
+                <Col xs={24} md={24} lg={8}>
+                    <Form.Item
+                      label="Experience "
+                      name="experience"
+                      required
+                      rules={[{ required: true }]}
+                    >
+                        <Input type="text"placeholder="your experience" />
+
+                    </Form.Item>
+                </Col>
+                <Col xs={24} md={24} lg={8}>
+                    <Form.Item
+                      label="Fees Per Cunsaltation "
+                      name="feesPerCunsaltation"
+                      required
+                      rules={[{ required: true }]}
+                    >
+                        <Input type="text"placeholder="your feespercunsaltation" />
+
+                    </Form.Item>
+                </Col>
+                <Col xs={24} md={24} lg={8}>
+                    <Form.Item
+                      label="Timing"
+                      name="timing"
+                      required
+                      rules={[{ required: true }]}
+                    >
+                      <TimePicker.RangePicker/>
+
+                    </Form.Item>
+                </Col>
+            </Row>
+            <div className="d-flex justify-content-end">
+                <button className="btn btn-primary" type="submit">submit</button>
+            </div>
+   
+    </Layout>
+  );
+};
 
 export default ApplyDoctor
