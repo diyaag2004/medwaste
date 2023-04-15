@@ -1,14 +1,14 @@
 import React from 'react';
-import { Form, Input, message, checkbox, email } from "antd";
+import { Form, Input, message, Checkbox , email } from "antd";
 
-
-function Register() {
+const Register = () => {
+  //const navigate = useNavigate();
   return (
     <div>
         <div className="form-container ">
         <Form
           layout="vertical"
-          onFinish={onfinishHandler}
+          //onFinish={onfinishHandler}
           className="register-form"
         >
           <h3 className="text-center">Register From</h3>
@@ -32,9 +32,9 @@ function Register() {
           </Form.Item>
           
           
-          <Link to="/login" className="m-2">
+          {/* <Link to="/login" className="m-2">
             Already user login here
-          </Link>
+          </Link> */}
           <button className="btn btn-primary" type="submit">
             Register
           </button>
