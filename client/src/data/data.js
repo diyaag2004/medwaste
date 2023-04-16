@@ -1,4 +1,4 @@
-export const sidebarMenu = [
+export const SidebarMenu = [
     {
         name:'Home',
         path:'/',
@@ -24,5 +24,5 @@ export const sidebarMenu = [
         name:'Logout',
         path:'/logout',
         icon:'fa-solid fa-right-from-bracket'
-    },
-];
+    }
+]

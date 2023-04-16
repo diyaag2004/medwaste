@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from './../components/Layout';
-import { Col, Form, Input, Row, TimePicker} from 'antd'
+import Layout from '../../components/Layout';
+import { Col, Form, Input, Row, TimePicker} from 'antd';
 
 const ApplyDoctor = () => {
     const HandleFinish = (values) => {

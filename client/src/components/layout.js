@@ -1,39 +1,36 @@
-import React, { Children } from 'react';
+import React from 'react';
 import "../styles/layoutStyles.css";
-import { sidebarMenu } from '../data/data';
-import {Link} from 'react-router-dom';
-const Layout =({Children}) =>{
+import { SidebarMenu} from '../data/data';
+import {Link,useLocation} from 'react-router-dom';
+const Layout =({children}) =>{
+    const location = useLocation();
     return (
-        
-        <>
-        <div className="main">
-            <div className="layout">
-            <div className="sidebar">
+    <><div className="main">
+    <div className="layout">
+        <div className="sidebar">
             <div className="logo"> 
-            <h6>DOC APP</h6>
-            <hr/>
+                <h6>MED WASTE</h6>
+                <hr/>
             </div>
+
             <div className="menu">
-                {sidebarMenu.map(menu => {
-                    return (
+                {SidebarMenu.map(menu => {
+                    const isActive = location.pathname===menu.path
+                    return(
                         <>
-                        <div className='mennu-item'>
+                        <div className={`menu-item ${isActive && "active"}`}>
                             <i className={menu.icon}></i>
                             <Link to={menu.path}>{menu.name}</Link>
-                            </div>
-                            </>
-                    )
-                })}
-            </div>
-            </div>
-            <div className="content">
-            <div className="header">Header</div>
-            <div className="body">{Children}</div>
-            </div>
-            </div>
-        </div>
-        </>
+                          </div>
+                        </>
+                    )})}
+                       
 
-    );
-};
+                </div>
+        </div>
+        <div className="content">
+            <div className="header">Header</div>
+            <div className="body">{children}</div>
+        </div>
+    </div></div></>)}
 export default Layout;

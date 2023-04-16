@@ -82,16 +82,16 @@ try {
 }
 };
 
-// const applyDoctorController = async (req,res) => {
-//   try{
-//     const newDoctor = await doctorModel({...req.body,})
-//   } catch (error) {
-//     console.log(error)
-//     res.status(500).send({
-//       success:false,
-//       error,
-//       message:'Error While Applying For Doctors'
-//     })
-//   }
-// }
+const applyDoctorController = async (req,res) => {
+  try{
+    const newDoctor = await doctorModel({...req.body,})
+  } catch (error) {
+    console.log(error)
+    res.status(500).send({
+      success:false,
+      error,
+      message:'Error While Applying For Doctors'
+    })
+  }
+}
 module.exports = { loginController, registerController , authController }
