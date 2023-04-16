@@ -14,15 +14,17 @@ function App() {
       <BrowserRouter>
       {loading ? <Spinner/> :<Routes>
           <Route path="/" element={
-            <HomePage />
+            <ProtectedRoute><HomePage/></ProtectedRoute>
+            
               
           } />
           <Route path="/login" element={
-            <Login />
+            <PublicRoute><Login /></PublicRoute>
+            
           
           } />
           <Route path="/register" element={
-           <Register/>
+           <PublicRoute><Register/></PublicRoute>
         } /></Routes>
           }
       </BrowserRouter>

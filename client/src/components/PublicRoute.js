@@ -1,8 +1,10 @@
-import React, { children } from 'react';
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+
 
 export default function PublicRoute({children}) {
     if(localStorage.getItem('token')){
-        return <navigate to="/" />
+        return <Navigate to="/" />
     }else{
         return children;
     }
