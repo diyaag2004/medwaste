@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/RegiserStyles.css";
 import { Form, Input, message } from "antd";
+import { useDispatch } from "react-redux";
+import { showLoading,hideloading } from "../redux/features/alertslice";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
