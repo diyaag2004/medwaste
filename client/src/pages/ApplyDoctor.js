@@ -126,14 +126,17 @@ const ApplyDoctor = () => {
                       required
                       rules={[{ required: true }]}
                     >
-                      <TimePicker.RangePicker/>
+                      <TimePicker.RangePicker format="HH:mm" />
 
                     </Form.Item>
                 </Col>
+                <Col xs={24} md={24} lg={8}></Col>
+                <Col xs={24} md={24} lg={8}>
+                <button className="btn btn-primary form-btn" type="submit">submit</button>
+                </Col>
+
             </Row>
-            <div className="d-flex justify-content-end">
-                <button className="btn btn-primary" type="submit">submit</button>
-            </div>
+           
    
     </Layout>
   );
