@@ -22,7 +22,7 @@ export const sidebarMenu = [
     },
     {
         name:'Logout',
-        path:'/',
-        icon:'fa-solid fa-user'
+        path:'/logout',
+        icon:'fa-solid fa-right-from-bracket'
     },
-]
+];
