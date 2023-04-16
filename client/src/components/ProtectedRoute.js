@@ -1,6 +1,7 @@
 import React, { children } from 'react';
 import { useSelector,useDispatch } from 'react-redux';
-import { showLoading } from '../redux/features/alertslice';
+import { hideLoading, showLoading } from '../redux/features/alertslice';
+import axios from 'axios';
 
 export default function ProtectedRoute({children}) {
     const Dispatch = useDispatch()
@@ -9,14 +10,22 @@ export default function ProtectedRoute({children}) {
     const getUser =async() => {
         try {
             Dispatch(showLoading())
-            const res = await axios.post('/api/v1/user/')
+            const res = await axios.post('/api/v1/user/getUserData',{
+             token: localStorage.getItem('token')
+            },{
+            headers:{
+                Authorization:`Bearer ${localStorage.getItem('token')}`
+            }}
+            )
+            Dispatch(hideLoading())
         }   catch (error) {
+            Dispatch(hideLoading())
             console.log(error)
         }
     }
     if(localStorage.getItem("token")){
         return children
     }else{
-        return <Navigate to="/login"/>
+        return <navigate to="/login"/>
     }
 }

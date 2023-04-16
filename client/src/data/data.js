@@ -5,8 +5,8 @@ export const SidebarMenu = [
         icon:'fa-sharp fa-solid fa-house'
     },
     {
-        name:'Appointments',
-        path:'/appoinments',
+        name:'Login',
+        path:'/Login',
         icon:'fa-solid fa-list'
 
     },
@@ -16,8 +16,8 @@ export const SidebarMenu = [
         icon:'fa-solid fa-user-doctor'
     },
     {
-        name:'Profile',
-        path:'/profile',
+        name:'Register',
+        path:'/Register',
         icon:'fa-solid fa-user'
     },
     {
