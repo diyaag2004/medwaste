@@ -2,7 +2,7 @@
 //user.js //
 import React ,{useeffect ,usestate}from "react";
 import Layout from '"./../components/layout";
-import axios from 'axios'
+import axios from "axios"
 const user=()=>{
     const[ users,setusers] = usestate([])
     //getUsers
@@ -38,7 +38,7 @@ const user=()=>{
         title:"Created At",
         dataIndex:"created at",
         render:(text,record)=>(
-            <span>{record.created at?'Yes':'No'}</span>
+            <span>{record.created at ?'Yes':'No'}</span>
         )
     }
      {
