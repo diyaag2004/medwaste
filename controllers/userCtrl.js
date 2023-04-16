@@ -43,9 +43,10 @@ const loginController = async (req, res) => {
         .status(200)
         .send({ message: "Invlid EMail or Password", success: false });
     }
-    const token = await jwt.sign({ _id: user._id }, process.env.JWT_SECRET ,{
-      expiresIn: "2d",
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: "1d",
     });
+   
     res.status(200).send({success: true, message: "Login Success", token });
   } catch (error) {
     console.log(error);
