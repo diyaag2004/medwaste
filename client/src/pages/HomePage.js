@@ -15,7 +15,7 @@ const HomePage = () => {
 
 }
   }
-  useEffect(() => 
+  useEffect(() =>  
   {
     getUserData()
   },[])
