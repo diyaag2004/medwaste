@@ -80,7 +80,7 @@ try {
     error,
   });
 }
-}
+};
 
 // const applyDoctorController = async (req,res) => {
 //   try{
