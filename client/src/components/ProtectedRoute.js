@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { children } from 'react';
 
-export default function Protectedroute({children}) {
+export default function ProtectedRoute({children}) {
     if(localStorage.getItem("token")){
         return children
     }else{
-        return <Navigate to="/login"/>
+        return <navigate to="/login"/>
     }
 }
