@@ -1,9 +1,10 @@
-import React, { Children } from 'react'
-import "../styles/LayoutStyles.css";
-import { sidebarMenu } from '../../../temp/diya/data';
+import React, { Children } from 'react';
+import "../styles/layoutStyles.css";
+import { sidebarMenu } from '../data/data';
 import {Link} from 'react-router-dom';
-const Layout =({children}) =>{
+const Layout =({Children}) =>{
     return (
+        
         <>
         <div className="main">
             <div className="layout">
@@ -35,4 +36,4 @@ const Layout =({children}) =>{
 
     );
 };
-export default Layout
+export default Layout;
